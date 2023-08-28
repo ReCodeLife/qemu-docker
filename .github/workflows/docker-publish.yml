@@ -28,6 +28,11 @@ jobs:
       id-token: write
 
     steps:
+      - name: Set timezone
+          run: |
+            echo "Etc/UTC" | sudo tee /etc/timezone
+            sudo dpkg-reconfigure -f noninteractive tzdata
+
       - name: Checkout repository
         uses: actions/checkout@v3
 
