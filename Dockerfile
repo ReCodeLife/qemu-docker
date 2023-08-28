@@ -1,6 +1,6 @@
 FROM ubuntu:20.04 
 ARG QEMU_VERSION=8.1.0
-RUN apt update && && DEBIAN_FRONTEND="noninteractive" \
+RUN apt update && DEBIAN_FRONTEND="noninteractive" \
     apt-get install -y  autoconf automake autotools-dev curl libmpc-dev libmpfr-dev libgmp-dev \
               gawk build-essential bison flex texinfo gperf libtool patchutils bc \
               zlib1g-dev libexpat-dev pkg-config  libglib2.0-dev libpixman-1-dev libsdl2-dev \
